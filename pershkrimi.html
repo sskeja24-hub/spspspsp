@@ -1,0 +1,82 @@
+DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>Ismet Shehu – Kazerma e Cerenit</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Georgia", serif;
+            background-color: #f4f1ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            max-width: 800px;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #3b2f2f;
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #8b5e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ismet Shehu</h1>
+        <p>
+            <span class="highlight">Ismet Shehu</span> është themeluesi dhe drejtuesi vizionar pas 
+            <span class="highlight">Kazerma e Cerenit</span> — një nga destinacionet më të dashura 
+            për ushqim tradicional dhe eksperienca kulinarie në Shqipëri.
+            Me pasion të thellë për traditën, mikpritjen dhe shijet autentike shqiptare, 
+            Ismeti ka ndërtuar një rrjet restorantesh të suksesshëm dhe të dashur nga publiku.
+        </p>
+        <a href="galeria.html">
+        </a>
+    </div>
+    <script>
+let index = 0;
+let slides = document.getElementsByClassName("slide");
+
+function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    index++;
+    if (index > slides.length) {
+        index = 1;
+    }
+
+    slides[index - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // ndryshon foto çdo 2 sekonda
+}
+
+showSlides();
+</script>
+
+</body>
+</html>

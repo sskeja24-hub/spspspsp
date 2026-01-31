@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu - Kazerma e Cerenit</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        .menu {
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 800px;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #f5c77a;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #ffb703;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            font-size: 16px;
+            padding: 8px 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.2);
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .menu {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+        <h1>KAZERMA E CERENIT</h1>
+        <p class="subtitle">Menu Tradicionale Shqiptare</p>
+
+        <section>
+            <h2>GATIME TRADICIONALE</h2>
+            <ul>
+                <li>Fasule me pastërma</li>
+                <li>Pulë me jufka</li>
+                <li>Mish dhe patate</li>
+                <li>Mish qingji</li>
+                <li>Mish viçi</li>
+                <li>Fli</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>BYREK DHE SHTESA</h2>
+            <ul>
+                <li>Byrek me spinaq</li>
+                <li>Qofte</li>
+                <li>Patate të skuqura</li>
+                <li>Turshi</li>
+                <li>Sallatë sezonale</li>
+                <li>Salcë tradicionale</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>DJATHËRA</h2>
+            <ul>
+                <li>Djathë kaçkavall</li>
+                <li>Djathë nape</li>
+                <li>Djathë me boronica</li>
+                <li>Djathë pikant</li>
+                <li>Djathë i bardhë</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>ËMBËLSIRA</h2>
+            <ul>
+                <li>Bakllava</li>
+                <li>Tortë kosi</li>
+                <li>Tiramisu</li>
+                <li>Cheesecake</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>PIJE</h2>
+            <ul>
+                <li>Lëng trëndafili</li>
+                <li>Lëng boronice</li>
+                <li>Lëng shege</li>
+                <li>Ujë</li>
+                <li>Dhallë</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© 2026 Kazerma e Cerenit</p>
+            <a href="rrjet social.html">
+            </a>
+        </footer>
+    </div>
+    <script>
+let index = 0;
+let slides = document.getElementsByClassName("slide");
+
+function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    index++;
+    if (index > slides.length) {
+        index = 1;
+    }
+
+    slides[index - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // ndryshon foto çdo 2 sekonda
+}
+
+showSlides();
+</script>
+
+</body>
+</html>
